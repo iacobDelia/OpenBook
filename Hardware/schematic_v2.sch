@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -2926,9 +2926,9 @@ Source: &lt;a href="https://www.attend.com.tw/data/download/file/112A-TAAR-R03.p
 <part name="SUPPLY29" library="DeskAssistant v19 v1" library_urn="urn:adsk.wipprod:fs.file:vf.0g3En2BnSRm5DJFKR7Rniw" deviceset="3V3-CIRCLE" device="" value="3V3"/>
 <part name="SUPPLY30" library="DeskAssistant v19 v1" library_urn="urn:adsk.wipprod:fs.file:vf.0g3En2BnSRm5DJFKR7Rniw" deviceset="3V3-CIRCLE" device="" value="3V3"/>
 <part name="C_DELAY" library="DeskAssistant v19 v1" library_urn="urn:adsk.wipprod:fs.file:vf.0g3En2BnSRm5DJFKR7Rniw" deviceset="ESP32_WROVER_EAGLE-LTSPICE_C" device="C0402" package3d_urn="urn:adsk.eagle:package:47636375/2" value="100nF"/>
-<part name="C5" library="DeskAssistant v19 v1" library_urn="urn:adsk.wipprod:fs.file:vf.0g3En2BnSRm5DJFKR7Rniw" deviceset="ESP32_WROVER_EAGLE-LTSPICE_C" device="C0402" package3d_urn="urn:adsk.eagle:package:47636375/2" value="10uF"/>
-<part name="C6" library="DeskAssistant v19 v1" library_urn="urn:adsk.wipprod:fs.file:vf.0g3En2BnSRm5DJFKR7Rniw" deviceset="ESP32_WROVER_EAGLE-LTSPICE_C" device="C0402" package3d_urn="urn:adsk.eagle:package:47636375/2" value="10uF"/>
-<part name="C10" library="DeskAssistant v19 v1" library_urn="urn:adsk.wipprod:fs.file:vf.0g3En2BnSRm5DJFKR7Rniw" deviceset="ESP32_WROVER_EAGLE-LTSPICE_C" device="C0402" package3d_urn="urn:adsk.eagle:package:47636375/2" value="10uF"/>
+<part name="C5" library="DeskAssistant v19 v1" library_urn="urn:adsk.wipprod:fs.file:vf.0g3En2BnSRm5DJFKR7Rniw" deviceset="ESP32_WROVER_EAGLE-LTSPICE_C" device="C0402" package3d_urn="urn:adsk.eagle:package:47636375/2" value="1uF"/>
+<part name="C6" library="DeskAssistant v19 v1" library_urn="urn:adsk.wipprod:fs.file:vf.0g3En2BnSRm5DJFKR7Rniw" deviceset="ESP32_WROVER_EAGLE-LTSPICE_C" device="C0402" package3d_urn="urn:adsk.eagle:package:47636375/2" value="100nF"/>
+<part name="C10" library="DeskAssistant v19 v1" library_urn="urn:adsk.wipprod:fs.file:vf.0g3En2BnSRm5DJFKR7Rniw" deviceset="ESP32_WROVER_EAGLE-LTSPICE_C" device="C0402" package3d_urn="urn:adsk.eagle:package:47636375/2" value="100nF"/>
 <part name="R_RESET" library="DeskAssistant_v19_v1" library_urn="urn:adsk.wipprod:fs.file:vf.EQLOxIDGRNyRrnCg3211Tg" deviceset="ESP32_WROVER_EAGLE-LTSPICE_R" device="R0402" package3d_urn="urn:adsk.eagle:package:47629882/1" value="10K"/>
 <part name="R_BOOT" library="DeskAssistant_v19_v1" library_urn="urn:adsk.wipprod:fs.file:vf.EQLOxIDGRNyRrnCg3211Tg" deviceset="ESP32_WROVER_EAGLE-LTSPICE_R" device="R0402" package3d_urn="urn:adsk.eagle:package:47629882/1" value="10K"/>
 <part name="R_CHANGE" library="DeskAssistant_v19_v1" library_urn="urn:adsk.wipprod:fs.file:vf.EQLOxIDGRNyRrnCg3211Tg" deviceset="ESP32_WROVER_EAGLE-LTSPICE_R" device="R0402" package3d_urn="urn:adsk.eagle:package:47629882/1" value="10K"/>
@@ -3720,11 +3720,6 @@ Boot / IO Button</text>
 <junction x="149.86" y="104.14"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="Q1" gate="G$1" pin="G"/>
-</segment>
-<segment>
-<wire x1="317.5" y1="93.98" x2="314.96" y2="93.98" width="0.1524" layer="91"/>
-<label x="314.96" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U2" gate="G$1" pin="IO9"/>
 </segment>
 </net>
 <net name="RESE" class="0">
@@ -4974,6 +4969,11 @@ Boot / IO Button</text>
 <pinref part="BOOT_BUTTON" gate="G$1" pin="3"/>
 <pinref part="BOOT_BUTTON" gate="G$1" pin="4"/>
 </segment>
+<segment>
+<wire x1="317.5" y1="93.98" x2="314.96" y2="93.98" width="0.1524" layer="91"/>
+<label x="314.96" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="IO9"/>
+</segment>
 </net>
 <net name="IO/CHANGE" class="0">
 <segment>
@@ -5193,7 +5193,7 @@ Boot / IO Button</text>
 <pinref part="U2" gate="G$1" pin="IO13"/>
 </segment>
 </net>
-<net name="N$28" class="0">
+<net name="GPIO18" class="0">
 <segment>
 <wire x1="317.5" y1="96.52" x2="302.26" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="302.26" y1="96.52" x2="297.18" y2="96.52" width="0.1524" layer="91"/>
